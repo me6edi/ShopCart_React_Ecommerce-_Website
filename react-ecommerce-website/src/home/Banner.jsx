@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import productData from "../products.json"
+import { Link } from 'react-router-dom';
+import SelectedCategory from '../components/SelectedCategory';
 
 const title = (
     <h2>Search Your one From <span>Thousand</span> of Products</h2>
@@ -38,7 +40,7 @@ const Banner = () => {
 
         // filtering products based on search
         const filtered = productData.filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
-        {searchInput} onChange={handleSearch}
+        setFilteredProducts(filtered)
     }
 
   return (
@@ -47,9 +49,19 @@ const Banner = () => {
             <div className="banner-content">
                 {title}
                 <form>
+                    <SelectedCategory select={"all"}/>
                     <input type="text" name='search' id='search' placeholder='Search your product' value={searchInput} onChange={handleSearch}/>
+                    <button type="submit"><i className="iconfont-search"></i></button>
                 </form>
                 <p>{dese}</p>
+
+                <ul className='lab-ul'>
+                        {
+                            searchInput && filteredProducts.map((product, i)=> <li key={i}>
+                                <Link to={`/shop/${product.id}`}>{product.name}</Link>
+                            </li>)
+                        }
+                </ul>
             </div>
         </div>
     </div>
