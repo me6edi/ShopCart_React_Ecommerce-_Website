@@ -84,8 +84,11 @@ function CategoryShowCase() {
 
 
     // category base filtering
-  const filterItem = () => {
-
+  const filterItem = (categItem) => {
+    const updateItems = ProductData.filter((curElem) => {
+      return curElem.cate === categItem;
+    });
+    setItems(updateItems)
   }
 
   return (
@@ -99,7 +102,7 @@ function CategoryShowCase() {
                   <h2 className="title">{title}</h2>
               <div className="course-filter-group">
               <ul className="lab-ul">
-                <li onClick={() => filterItem("All")}>All</li>
+                <li onClick={() => setItems(ProductData)}>All</li>
                 <li onClick={() => filterItem("Shoes")}>Shoes</li>
                 <li onClick={() => filterItem("Bags")}>Bags</li>
                 <li onClick={() => filterItem("Phones")}>Phones</li>
@@ -112,12 +115,12 @@ function CategoryShowCase() {
 
                 {/* section body */}
             <div className='section-wrapper'>
-                  <div>
+                  <div className="row g-4 justify-content-center row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 course-filter">
                     {
                       items.map((product) => <div key={product.id} className="col">
                           <div className='course-item style-4'>
                               <div className="course-inner">
-                                <div className="course-thubm">
+                                <div className="course-thumb">
                                   <img src={product.imgUrl} alt="" />
                                   <div className="course-category">
                                         <div className="course-cate">
