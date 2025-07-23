@@ -17,6 +17,7 @@ import '././assets/css/style.min.css';
 import App from './App.jsx'
 import Home from './home/Home.jsx';
 import Blog from './blog/Blog.jsx';
+import Shop from './Shop/Shop.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         element: <Home/>},{
           path:"/blog",
           element: <Blog/>
+        },
+        {
+          path:"/shop",
+          element: <Shop/>
         }
     ],
   },
