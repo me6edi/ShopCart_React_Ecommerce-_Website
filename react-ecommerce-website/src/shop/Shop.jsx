@@ -24,29 +24,32 @@ const Shop = () => {
     setCurrentPage(pageNumber);
   };
 
-  // filter products based on category
-
+  // Filter products by category
   const [selectedCategory, setselectedCategory] = useState("All");
-  const menuItems = [...new setCurrentPage(Data.map((val) => val.category))];
+  const menuItems = ["All", ...new Set(Data.map((val) => val.category))];
 
   const filterItem = (curcat) => {
-    const newItem =Data.filter((newVal) => {
-      return newVal.category === curcat;
-    })
+    if (curcat === "All") {
+      setproducts(Data);
+    } else {
+      const newItem = Data.filter((newVal) => newVal.category === curcat);
+      setproducts(newItem);
+    }
     setselectedCategory(curcat);
-    setproducts(newItem);
-  }
+    setCurrentPage(1); // Reset to page 1 on filter
+  };
 
   return (
     <div>
       <PageHeader title="Our Shop Page" curpage="Shop" />
+
       {/* shop page */}
       <div className="shop-page padding-tb">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-12">
               <article>
-                {/* layout and title here */}
+                {/* layout and title */}
                 <div className='shop-title d-flex flex-wrap justify-content-between'>
                   <p>{showResults}</p>
                   <div className={`product-view-mode ${GridList ? "gridActive" : "listActive"}`}>
@@ -73,15 +76,15 @@ const Shop = () => {
                 />
               </article>
             </div>
+
+            {/* sidebar */}
             <div className="col-lg-4 col-12">
               <aside>
                 <Search products={products} GridList={GridList} />
                 <ShopCategory
-                filterItem={filterItem}
-                setItem = {setproducts}
-                menuItems={menuItems}
-                setproducts={setproducts}
-                selectedCategory={selectedCategory}
+                  filterItem={filterItem}
+                  menuItems={menuItems}
+                  selectedCategory={selectedCategory}
                 />
               </aside>
             </div>

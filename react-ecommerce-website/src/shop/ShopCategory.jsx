@@ -4,7 +4,7 @@ const ShopCategory = ({filterItem, setItem, menuItems, setProducts, selectedCate
     return(
         <>
         <div className='widget-header'>
-                <h5 className='ms-2'></h5>
+                <h5 className='ms-2'>All Categories</h5>
         </div>
         </>
     )
