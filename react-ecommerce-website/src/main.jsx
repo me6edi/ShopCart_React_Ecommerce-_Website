@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import 'swiper/css';
+import SingleProduct from './Shop/SingleProduct.jsx';
+
 
 // bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
         {
           path:"/shop",
           element: <Shop/>
+        },
+        {
+            path: "shop/:id",
+            element: <SingleProduct/>
         }
     ],
   },
