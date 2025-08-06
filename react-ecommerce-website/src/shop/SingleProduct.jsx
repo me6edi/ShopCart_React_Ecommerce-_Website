@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
+import PopularPost from "../shop/PopularPost";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -88,7 +89,11 @@ const SingleProduct = () => {
                 </div>
               </article>
             </div>
-            <div className="col-lg-4 col-12">right side</div>
+            <div className="col-lg-4 col-12">
+              <div className="ps-lg-4">
+                    <PopularPost/>
+              </div>
+            </div>
           </div>
         </div>
       </div>
