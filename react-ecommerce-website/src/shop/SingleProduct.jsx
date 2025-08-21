@@ -20,7 +20,7 @@ const SingleProduct = () => {
     fetch("/src/products.json")
       .then((res) => res.json())
       .then((data) => setProduct(data));
-    console.log(product);
+    // console.log(product);
   }, []);
 
   const result = product.filter((p) => p.id === id);

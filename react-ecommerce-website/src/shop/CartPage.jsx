@@ -38,11 +38,16 @@ const CartPage = () => {
 const handleRemoveItem = (item) => {
     const updatecart = cartItems.filter((cartItem) => cartItems.id !== item.id);
 
-
     // update newcart
     setcartItems(updatecart);
+    updateLocalStorage(updatecart)
+}
+const updateLocalStorage = (cart) => {
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+// cart subtotal
+const cartSubtoal = cartItems.reduce((total, item))
   return (
     <div>CartPage</div>
   )
