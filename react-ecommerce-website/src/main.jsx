@@ -20,6 +20,7 @@ import App from './App.jsx'
 import Home from './home/Home.jsx';
 import Blog from './blog/Blog.jsx';
 import Shop from './Shop/Shop.jsx';
+import CartPage from './shop/CartPage.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
         },
         {
         path: "/cart-page",
-        element: <cartPage/>
+        element: <CartPage/>
         }
 
     ],

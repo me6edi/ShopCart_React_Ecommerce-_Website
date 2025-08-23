@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-const PageHeader = ({title, curPage}) => {
+const PageHeader = ({title, cartPage}) => {
   return (
     <div className='pageheader-section'>
             <div className="container">
@@ -11,7 +11,7 @@ const PageHeader = ({title, curPage}) => {
                             <nav aria-lable="breadcrumb">
                                 <ol className='breadcrumb justify-content-center'>
                                         <li className='breadcrumb-item'><Link to="/">Home</Link></li>
-                                        <li className='breadcrumb-item active' aria-current="page">{curPage}</li>
+                                        <li className='breadcrumb-item active' aria-current="page">{cartPage}</li>
                                 </ol>
                             </nav>
                         </div>
