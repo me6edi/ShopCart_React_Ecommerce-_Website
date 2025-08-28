@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import { Link } from "react-router-dom";
 import delImgUrl from "../assets/images/shop/del.png";
+import CheckOutPage from "./CheckOutPage";
 
 const CartPage = () => {
   const [cartItems, setcartItems] = useState([]);
@@ -142,7 +143,7 @@ const CartPage = () => {
 
                 <form className="cart-checkout">
                   <input type="submit" value="Update Cart" />
-                  <div>CheckoutPage</div>
+                  <CheckOutPage/>
                 </form>
               </div>
               {/* checkout box end*/}
@@ -179,10 +180,29 @@ const CartPage = () => {
                           </span>
                         </select>
                       </div>
-                      <input type="text" name="postalCode" id="postalCode" className="cart-page-input-text" />
+                      <input type="text" name="postalCode" id="postalCode" className="cart-page-input-text mt-2" placeholder="Postcode/ZIP"/>
+                      <button type="submit" className="mt-2">Update Address</button>
                     </div>
                   </div>
-                  <div className="col-md-6 col-12">Right Side</div>
+                  <div className="col-md-6 col-12">
+                    <div className="cart-overview">
+                        <h3>Cart Totals</h3>
+                        <ul className="lab-ul">
+                              <li>
+                                <span className="pull-left">Cart Subtotal</span>
+                                <p className="pull-right">$ {cartSubtotal}</p>
+                              </li>
+                              <li>
+                                <span className="pull-left">Shipping and Handling</span>
+                                <p className="pull-right">Free Shipping</p>
+                              </li>
+                               <li>
+                                <span className="pull-left">Order Total</span>
+                                <p className="pull-right">${orderTotal.toFixed(2)}</p>
+                              </li>
+                        </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
