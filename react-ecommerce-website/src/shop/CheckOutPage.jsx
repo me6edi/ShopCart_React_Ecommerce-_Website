@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../components/modal.css";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CheckOutPage = () => {
   const [show, setShow] = useState(false);
@@ -10,6 +11,20 @@ const CheckOutPage = () => {
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
   };
+
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(flase);
+
+// direct to home page
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
+
+  const handleOrderConfirm = () => {
+    alert("Your Order is placed successfully!")
+    localStorage.removeItem("cart");
+    navigate(from, {replace: true})
+  }
 
   return (
     <div className="modalCard">
@@ -38,7 +53,9 @@ const CheckOutPage = () => {
                     aria-controls="visa"
                     aria-selected={activeTab === "visa"}
                     onClick={() => handleTabChange("visa")}
-                    className={`nav-link ${activeTab === "visa" ? "active" : ""}`}
+                    className={`nav-link ${
+                      activeTab === "visa" ? "active" : ""
+                    }`}
                   >
                     <img
                       src="https://imgur.com/sB4jftM.png"
@@ -123,7 +140,7 @@ const CheckOutPage = () => {
                         </div>
                       </div>
                       <div className="px-5 pay">
-                        <button className="btn btn-success btn-block">
+                        <button className="btn btn-warning btn-block" onClick={handleOrderConfirm}>
                           Pay Now
                         </button>
                       </div>
@@ -164,16 +181,17 @@ const CheckOutPage = () => {
                         <span>Your Name</span>
                       </div>
                       <div className="inputbox">
-                        <textarea
+                        <input
+                          type="text"
                           name="extraInfo"
                           className="form-control"
-                          rows="3"
                           required
-                        ></textarea>
+                        />
                         <span>Extra Info</span>
                       </div>
+
                       <div className="px-5 pay">
-                        <button className="btn btn-warning btn-block">
+                        <button className="btn btn-primary btn-block" onClick={handleOrderConfirm}>
                           Proceed with PayPal
                         </button>
                       </div>
@@ -182,6 +200,12 @@ const CheckOutPage = () => {
                 </div>
               </div>
               {/* End Tab Content */}
+
+              {/* payment desclaimer */}
+              <p className="mt-3 px-4 p-Disclaimer">
+                <em>Pyament Disclaimer:</em> In no event shall payment or
+                partial payment by Owner for any meterial or service
+              </p>
             </div>
           </div>
         </div>
