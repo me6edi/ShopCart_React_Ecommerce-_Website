@@ -4,16 +4,16 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Business Ueporting Rouncil Them Could Plan.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '4',
         btnText: 'Read More',
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },
@@ -23,16 +23,16 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Financial Reporting Qouncil What Could More.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '8',
         btnText: 'Read More',
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },
@@ -42,16 +42,16 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Consulting Reporting Qounc Arei Could More.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '6',
         btnText: 'Read More',
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },
@@ -61,16 +61,16 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Strategic Social Media and of visual design.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '6',
         btnText: 'Read More',
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },
@@ -80,16 +80,16 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Find the Right Path for your Group Course online.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '5',
         btnText: 'Read More',
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },
@@ -104,11 +104,11 @@ const blogList = [
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },
@@ -118,16 +118,16 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'The Importance Of Intrinsic for Students.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '7',
         btnText: 'Read More',
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },
@@ -137,16 +137,16 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'A Better Alternative To Grading Student Writing.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '5',
         btnText: 'Read More',
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },
@@ -156,16 +156,16 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'The Challenge Global Learning In Public Education.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '9',
         btnText: 'Read More',
         metaList: [
             {
                 iconName: 'icofont-ui-user',
-                text: 'Rajib Raj',
+                text: 'Mehedi Amin',
             },
             {
                 iconName: 'icofont-calendar',
-                text: 'Jun 05,2022',
+                text: 'Jun 05,2025',
             },
         ],
     },

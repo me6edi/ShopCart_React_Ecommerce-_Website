@@ -11,7 +11,7 @@ const PageHeader = ({title, cartPage}) => {
                             <nav aria-lable="breadcrumb">
                                 <ol className='breadcrumb justify-content-center'>
                                         <li className='breadcrumb-item'><Link to="/">Home</Link></li>
-                                        <li className='breadcrumb-item active' aria-current="page">{cartPage}</li>
+                                         <li className='breadcrumb-item active' aria-current="page">{cartPage}</li>
                                 </ol>
                             </nav>
                         </div>
