@@ -16,9 +16,11 @@ import App from "./App.jsx";
 import Home from "./home/Home.jsx";
 import Blog from "./blog/Blog.jsx";
 import Shop from "./Shop/Shop.jsx";
+import About from "./about/About.jsx";
 import CartPage from "./shop/CartPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import SingleBlog from "./blog/SingleBlog.jsx";
+import Contact from "./contactPage/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
         path: "/cart-page",
         element: <CartPage />,
       },
+      {
+        path: "/about",
+        element: <About/>
+      },
+            {
+        path: "/contact",
+        element: <Contact/>
+      }
     ],
   },
 ]);

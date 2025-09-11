@@ -2,7 +2,16 @@ import { useState } from "react";
 import blogList from "../utilis/blogdata";
 import { useParams } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
+import Tags from "../shop/Tags.jsx"
+import PopularPost from "../shop/PopularPost.jsx"
 
+const socialList = [
+  { link: "#", iconName: "icofont-facebook", className: "facebook" },
+  { link: "#", iconName: "icofont-twitter", className: "twitter" },
+  { link: "#", iconName: "icofont-linkedin", className: "linkedin" },
+  { link: "#", iconName: "icofont-instagram", className: "instagram" },
+  { link: "#", iconName: "icofont-pinterest", className: "pinterest" },
+];
 const SingleBlog = () => {
   const [blog, setblog] = useState(blogList);
   const { id } = useParams();
@@ -69,11 +78,128 @@ const SingleBlog = () => {
                                   that never was greater artst
                                 </p>
                                 <blockquote>
-                                  <p></p>
+                                  <p>
+                                    Dynamically recaptiualize distributed
+                                    technologies is wherease turnkey channels
+                                    and onotonectally provide access to resource
+                                    leveling expertise vias worldwide
+                                    deliverables uolisticly extend aserser are
+                                    diverse vortals.
+                                  </p>
+                                  <cite>
+                                    <a href="#">...Melissa Hunter</a>
+                                  </cite>
                                 </blockquote>
+
+                                <p>
+                                  whole heart create am alones and feel the
+                                  charm of exstenceth spot whch the blissouls
+                                  like mineing am soo happy my dearsi frend
+                                  absoribed the exquste sense enjoy my whole
+                                  hearts alone and fee the charm of exstenceths
+                                  spotsi whch was the blis of soulis mineing
+                                  amsoing dear frend soingu absoribed the exqust
+                                  sense tranqui existence neglect my talentsr
+                                  should ncapable ofing is drawng singe
+                                  wonderful serenty has taken possesison of my
+                                  entre soulng these sweet present moment and
+                                  yet feel that never was greater artst
+                                </p>
+                                <img
+                                  src="/src/assets/images/blog/single/01.jpg"
+                                  alt=""
+                                />
+                                <p>
+                                  Serenity hasir taken poseson mying entre soung
+                                  these sweet morngs sprng whch enoywith whole
+                                  heart create am alones and feel the charm of
+                                  exstenceth spot whch the blissouls like
+                                  mineing am soo happy my dearsi frend absoribed
+                                  the exquste sense enjoy my whole hearts alone
+                                  and fee the charm of exstenceths spotsi whch
+                                  was the blis of soulis mineing amsoing dear
+                                  frend soingu absoribed the exqust sense
+                                  tranqui existence neglect my talentsr should
+                                  ncapable ofing is drawng singe wonderful
+                                  serenty has taken possesison of my entre
+                                  soulng these sweet present moment and yet feel
+                                  that never was greater artst
+                                </p>
+
+                                <div className="video-thumb">
+                                  <img
+                                    src="/src/assets/images/blog/single/02.jpg"
+                                    alt=""
+                                  />
+                                  <a
+                                    href="https://www.youtube.com/watch?v=VMZ7lcSdVnY"
+                                    className="video-button popup"
+                                  >
+                                    <i className="icofont-ui-play" target="_blank"></i>
+                                  </a>
+                                </div>
+
+                                <p>
+                                  whole heart create am alones and feel the
+                                  charm of exstenceth spot whch the blissouls
+                                  like mineing am soo happy my dearsi frend
+                                  absoribed the exquste sense enjoy my whole
+                                  hearts alone and fee the charm of exstenceths
+                                  spotsi whch was the blis of soulis mineing
+                                  amsoing dear frend soingu absoribed the exqust
+                                  sense tranqui existence neglect my talentsr
+                                  should ncapable ofing is drawng singe
+                                  wonderful serenty has taken possesison of my
+                                  entre soulng these sweet present moment and
+                                  yet feel that never was greater artst
+                                </p>
+                                <div className="tags-section">
+                                  <ul className="tags lab-ul">
+                                    <li>
+                                      <a href="#">Agency</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">Business</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">parsonal</a>
+                                    </li>
+                                  </ul>
+                                  <ul className="lab-ul social-icons">
+                                    {socialList.map((val, i) => (
+                                      <li key={i}>
+                                        <a href="#" className={val.className}>
+                                          <i className={val.iconName}></i>
+                                        </a>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           ))}
+                        </div>
+                      </div>
+
+                      <div className="navigations-part">
+                        <div className="left">
+                          <a href="#" className="prev">
+                            <i className="icofont-double-left"></i> Previous
+                            Blog
+                          </a>
+                          <a href="#" className="title">
+                            Evisculate Parallel Processess via Technica sound
+                            Models Authoritative
+                          </a>
+                        </div>
+                        <div className="right">
+                          <a href="#" className="prev">
+                            Next Article<i className="icofont-double-right"></i>
+                          </a>
+                          <a href="#" className="title">
+                            Ovisculate Parallel Processes via Technica Sound
+                            Models Authoritative
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -81,7 +207,13 @@ const SingleBlog = () => {
                 </div>
               </article>
             </div>
-            <div className="col-lg-4 col-12">Right</div>
+
+            <div className="col-lg-4 col-12">
+              <aside>
+                <Tags/>
+                <PopularPost/>
+              </aside>
+            </div>
           </div>
         </div>
       </div>
