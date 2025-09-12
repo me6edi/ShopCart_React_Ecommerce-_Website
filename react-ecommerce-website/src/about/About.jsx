@@ -70,6 +70,7 @@ function About() {
                                                 </div>
                                                 <div className="sr-right">
                                                         <h5>{val.title}</h5>
+                                                        <p>{val}</p>
                                                 </div>
                                             </li>
                                         ))
