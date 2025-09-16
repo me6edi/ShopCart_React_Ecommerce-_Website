@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const desc =
   "Energistia an deliver atactica metrcs after adsionary Apropia trnsition enterpris an sources applications emerging psd template.";
 
 const ProductDisplay = ({ item }) => {
-  // console.log(item);
   const { name, id, price, seller, ratingsCount, quantity, img } = item;
 
   const [prequantity, setQuantity] = useState(quantity);
   const [coupon, setCoupon] = useState("");
   const [size, setSize] = useState("Select Size");
   const [color, setColor] = useState("Select color");
+
+  // ✅ Popup message state
+  const [message, setMessage] = useState("");
 
   const handleColorChange = (e) => {
     setColor(e.target.value);
@@ -45,10 +47,10 @@ const ProductDisplay = ({ item }) => {
       coupon: coupon,
     };
 
-    // Fixed the localStorage error - changed setItem to getItem
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    const existingProductIndex = existingCart.findIndex((item) => item.id === id);
+    const existingProductIndex = existingCart.findIndex(
+      (item) => item.id === id
+    );
 
     if (existingProductIndex !== -1) {
       existingCart[existingProductIndex].quantity += prequantity;
@@ -62,10 +64,44 @@ const ProductDisplay = ({ item }) => {
     setSize("Select Size");
     setColor("Select color");
     setCoupon("");
+
+    // ✅ Show success popup here
+    setMessage("✅ Your product has been added to the cart!");
+    setTimeout(() => setMessage(""), 3000);
   };
 
   return (
     <div>
+      {/* ✅ Global Popup */}
+      {message && (
+        <div
+          style={{
+            position: "fixed",
+            top: "20px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            backgroundColor: "#ffffff",
+            color: "#16a34a", // green text
+            padding: "16px 24px",
+            borderRadius: "12px",
+            boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+            zIndex: 9999,
+            fontWeight: "600",
+            fontSize: "15px",
+            border: "2px solid #f16126", // green border
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            minWidth: "280px",
+            maxWidth: "90%",
+            textAlign: "center",
+          }}
+        >
+          <span style={{ fontSize: "20px" }}>🛒</span>
+          {message}
+        </div>
+      )}
+
       {/* Product Info */}
       <div>
         <h4>{name}</h4>
@@ -114,7 +150,9 @@ const ProductDisplay = ({ item }) => {
 
           {/* Quantity Control */}
           <div className="cart-plus-minus">
-            <div className="dec qtybutton" onClick={handleDecrease}>-</div>
+            <div className="dec qtybutton" onClick={handleDecrease}>
+              -
+            </div>
             <input
               type="text"
               className="cart-plus-minus-box"
@@ -123,7 +161,9 @@ const ProductDisplay = ({ item }) => {
               value={prequantity}
               readOnly
             />
-            <div className="inc qtybutton" onClick={handleIncrease}>+</div>
+            <div className="inc qtybutton" onClick={handleIncrease}>
+              +
+            </div>
           </div>
 
           {/* Coupon Input */}
